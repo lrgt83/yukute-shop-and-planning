@@ -33,7 +33,9 @@ function Billing() {
     dispatch(getCustomers({ token }));
   }, [dispatch, token]);
 
-  const { products } = useSelector((state) => state.inventory);
+  const { products, productsRequestStatus } = useSelector(
+    (state) => state.inventory
+  );
   const { customers, createCustomerRequestStatus, customersRequestStatus } =
     useSelector((state) => state.customers);
   const {
@@ -130,14 +132,6 @@ function Billing() {
     return filteredProducts.length > 0;
   };
 
-  const optionsProduct = billTypeMapper[typeOfSale].products.map((product) => ({
-    value: product.id,
-    label: `${product.name} - ${product.description} - ${product.brand.name} - ${product.category.name} - Existencias: ${product.stock}`,
-    disabled: productIsAdded(product.id) || product.stock <= 0,
-    minThreshold: product.min_threshold,
-    stock: product.stock,
-  }));
-
   const optionsCustomer = customers.map((customer) => ({
     value: customer.id,
     label: `${customer.first_name} ${customer.last_name} - ${customer.nit}`,
@@ -183,6 +177,10 @@ function Billing() {
     setSelectedCustomerValue(selectCustomerInitialState);
     dispatch(resetSaleList());
   };
+
+  if (productsRequestStatus === "loading") {
+    return <div>Cargando datos...</div>;
+  }
 
   return (
     <div className="card card-custom">
@@ -280,7 +278,20 @@ function Billing() {
                 <label>Producto</label>
                 <Select
                   key={`my_unique_select_key__${productId}`}
-                  options={optionsProduct}
+                  options={billTypeMapper[typeOfSale].products.map(
+                    (product) => ({
+                      value: product.id,
+                      label: `${product.barcode || ""} - ${product.name} - ${
+                        product.description
+                      } - ${product.brand.name} - ${
+                        product.category.name
+                      } - Existencias: ${product.stock}`,
+                      disabled:
+                        productIsAdded(product.id) || product.stock <= 0,
+                      minThreshold: product.min_threshold,
+                      stock: product.stock,
+                    })
+                  )}
                   onChange={(choice) => {
                     handleUpdateInput("productId", choice.value);
                     handleUpdateInput("productLabel", choice.label);

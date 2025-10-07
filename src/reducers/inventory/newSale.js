@@ -20,7 +20,7 @@ const initialState = {
   saleList: [],
   total: 0,
   saveNewSaleStatus: "loading" | "failed" | "succeeded",
-  typeOfSale: "EVENT" | "SALE",
+  typeOfSale: "SALE",
 };
 
 export const newSale = createSlice({
