@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/yukute-shop-and-planning/static/css/main.b72eeb6d.css",
-    "main.js": "/yukute-shop-and-planning/static/js/main.3c819143.js",
+    "main.js": "/yukute-shop-and-planning/static/js/main.f6c4681c.js",
     "static/js/453.2095c32f.chunk.js": "/yukute-shop-and-planning/static/js/453.2095c32f.chunk.js",
     "static/media/la-brands-400.svg": "/yukute-shop-and-planning/static/media/la-brands-400.331115337bc9be66667a.svg",
     "static/media/la-solid-900.svg": "/yukute-shop-and-planning/static/media/la-solid-900.0f874d69730f8631d632.svg",
@@ -67,11 +67,11 @@
     "static/media/029-boy-11.svg": "/yukute-shop-and-planning/static/media/029-boy-11.1e347c9873eef0e8ec066670df868d09.svg",
     "index.html": "/yukute-shop-and-planning/index.html",
     "main.b72eeb6d.css.map": "/yukute-shop-and-planning/static/css/main.b72eeb6d.css.map",
-    "main.3c819143.js.map": "/yukute-shop-and-planning/static/js/main.3c819143.js.map",
+    "main.f6c4681c.js.map": "/yukute-shop-and-planning/static/js/main.f6c4681c.js.map",
     "453.2095c32f.chunk.js.map": "/yukute-shop-and-planning/static/js/453.2095c32f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b72eeb6d.css",
-    "static/js/main.3c819143.js"
+    "static/js/main.f6c4681c.js"
   ]
 }
