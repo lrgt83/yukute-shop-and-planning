@@ -54,7 +54,8 @@
     ]
   },
   "devDependencies": {
+    "ajv": "^7.2.4",
     "gh-pages": "^5.0.0"
   },
-  "homepage": "https://danielguarchaj.github.io/punto-venta-frontend"
+  "homepage": "https://lrgt83.github.io/yukute-shop-and-planning"
 }

@@ -9,7 +9,7 @@ export const APP_URLS = {
   billing: "billing",
   purchase: "purchase",
   sale: "sale",
-  admin: "https://danielguarchaj.pythonanywhere.com/admin/",
+  admin: "https://lrgt83.pythonanywhere.com/admin/",
 };
 
 export const APP_PATH_NAMES = {
